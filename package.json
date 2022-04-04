@@ -1,0 +1,17 @@
+{
+  "name": "cups",
+  "version": "1.0.0",
+  "description": "my collection of cup",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Vladislav Golikov",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-scripts": "^5.0.0"
+  }
+}
