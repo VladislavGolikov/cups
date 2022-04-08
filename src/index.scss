@@ -1,0 +1,23 @@
+@import "styles/reset.scss"; /* сброс стилей по умолчанию */
+@import "styles/fonts.scss"; /* собственные шрифты */
+
+body {
+    $indent: 50vw;
+    background: linear-gradient(135deg, yellow, green);
+    max-width: $indent;
+    min-height: 100vh;
+    max-height: 100vh;
+
+    h1 {
+    font-family: minecraft, sans-serif;
+    color: red;
+}
+
+
+
+
+
+}
+
+
+

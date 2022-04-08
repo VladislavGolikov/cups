@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-/*import './index.scss';
+import './index.scss';
 
 
-import {Cup} from './index2.jsx';
+/*import {Cup} from './index2.jsx';
 
 import cups from './config.json';
 
