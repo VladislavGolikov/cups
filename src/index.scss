@@ -2,15 +2,24 @@
 @import "styles/fonts.scss"; /* собственные шрифты */
 
 body {
-    $indent: 50vw;
+    $indent: 50vh;
     background: linear-gradient(135deg, yellow, green);
     max-width: $indent;
     min-height: 100vh;
     max-height: 100vh;
 
-    h1 {
+    .cup {
     font-family: minecraft, sans-serif;
     color: red;
+    position: absolute;
+    width: $indent;
+    height: $indent;
+    left: $indent;
+    top: $indent/2;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
 }
 
 
