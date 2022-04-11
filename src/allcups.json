@@ -1,5 +1,5 @@
 {
-  "fields": ["id","title","color","material","date","source","land","place","file"],
+  "fields": ["id","title","color","material","date","source","land","place","fileName"],
   "cups": [
     ["091203","produced in 1914","коричневый","керамика","неизвестно","сусло","россия","москва","091203-"],
     ["110919","FINLAND SUOMI","белый","керамика","19 сентября 2011","сам","финляндия","хельсинки","110919-"],
