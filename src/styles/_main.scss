@@ -1,0 +1,115 @@
+@import "reset.scss"; /* сброс стилей по умолчанию */
+@import "fonts.scss"; /* собственные шрифты */
+
+body {
+    background: linear-gradient(135deg, yellow, green);
+
+    $cups-columns: 5;
+    $cups-rows: 3;
+    $cups-size-column: 20vw;
+    $cups-size-row: 33vh;
+
+    $cup-columns: 50;
+    $cup-rows: 50;
+    $cup-size-column: 2%;
+    $cup-size-row: 2%;
+
+    .cups {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat($cups-columns,$cups-size-column);
+        grid-template-rows: repeat($cups-rows,$cups-size-row);
+
+
+
+        .cup {
+            display: grid;
+            grid-template-columns: repeat($cup-columns,$cup-size-column);
+            grid-template-rows: repeat($cup-rows,$cup-size-row);
+            background: linear-gradient(135deg, blue, red);
+
+
+
+            %vava {
+                outline: 1px green dashed;
+                font-family: minecraft, sans-serif;
+                color: red;
+                font-size: 1.2vh;
+
+
+            }
+
+
+
+            .id {
+                @extend %vava;
+                grid-column: 3 / 51;
+                grid-row: 40 / 42;
+
+
+            }
+            .title {
+                @extend %vava;
+                text-align: center;
+                grid-column: 1 / 51;
+                grid-row: 3 / 5;
+                font-size: 2.5vh;
+
+
+            }
+            .material {
+                @extend %vava;
+                grid-column: 3 / 51;
+                grid-row: 42 / 44;
+
+
+            }
+            .date {
+                @extend %vava;
+                grid-column: 3 / 51;
+                grid-row: 48 / 50;
+
+
+            }
+            .land {
+                @extend %vava;
+                grid-column: 3 / 51;
+                grid-row: 44 / 46;
+
+
+            }
+            .place {
+                @extend %vava;
+                grid-column: 3 / 51;
+                grid-row: 46 / 48;
+
+
+            }
+            .picture {
+                grid-column: 6 / 46;
+                grid-row: 6 / 46;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+
+
+
+            }
+
+
+
+        }
+    }
+
+
+
+
+
+}
+
+
+
