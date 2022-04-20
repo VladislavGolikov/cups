@@ -20,16 +20,12 @@ export class Cup extends React.Component {
 
         this.fileFrames=['1.png','2.png','3.png','4.png'];
 
-        this.vava=0
-
-
-
         this.state= {counter:0};
 
     }
 
     render() {
-        let filePath=`${process.env.PUBLIC_URL}/${this.fileName}${this.fileFrames[this.vava]}`;
+        let filePath=`${process.env.PUBLIC_URL}/${this.fileName}${this.fileFrames[this.state.counter]}`;
         return <div className="cup" onClick={this.counterPlus.bind(this)}>
                 <div className="id">{'№ '+this.id}</div>
                 <div className="title">{this.title}</div>
@@ -41,22 +37,15 @@ export class Cup extends React.Component {
                </div>;
     }
 
-counterPlus() {
+    counterPlus() {
+        this.setState({counter : this.increase(this.state.counter)});
+    }
 
-
-  this.vava+=1;
-
-
-
-
-
-    ;
-    if (this.vava>=this.fileFrames.length) {this.vava=0}
-        console.log(this.vava);
-
-
-
-}
+    increase(value) {
+        value++;
+        if (value>=this.fileFrames.length) {value=0}
+        return value;
+    }
 }
 
 

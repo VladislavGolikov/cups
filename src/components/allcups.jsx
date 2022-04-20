@@ -10,7 +10,7 @@ import allcups from '../data_source/allcups.json';
 export class AllCups extends React.Component {
     constructor(props) {
         super(props);
-        alert(window.innerHeight/window.innerWidth)
+       // alert(window.innerHeight/window.innerWidth)
 
         this.component=allcups.cups.map((el,ind)=>{return <Cup serial={ind} key={allcups.cups[ind][0]}></Cup>})
 
