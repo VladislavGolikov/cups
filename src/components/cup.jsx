@@ -6,9 +6,7 @@ import allcups from '../data_source/allcups.json';
 const fileFrames=['1.png','2.png','3.png','4.png'];
 
 function cycle(value) {
-        value++;
-        if (value>=fileFrames.length) {value=0}
-        return value;
+    return ++value>=fileFrames.length ? 0 : value
 }
 
 
