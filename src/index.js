@@ -4,13 +4,12 @@ import './index.scss';
 
 import {AllCups} from './components/allcups.jsx';
 
-
 const root=ReactDOM.createRoot(document.getElementById("root"));
 
 
-const firstComponent=new AllCups(0);
+const mainComponent=<AllCups></AllCups>;
 
-root.render(firstComponent.render());
+root.render(mainComponent);
 
 
 
