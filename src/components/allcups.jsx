@@ -11,9 +11,9 @@ export const AllCups=() => {
     const columns=allcups.cups.reduce((prev,el,ind,arr)=>{
         const value=Math.abs((ind+1)/Math.ceil(arr.length/(1+ind))-window.innerWidth/window.innerHeight);
         if (prev[0]>value) {return [value,ind]}else{return prev};
-    },[1000,0])[1];
+    },[1000,0])[1]; /* рассчитываем чтобы соотношение столбцов и строк вышло наиболее близким к отношению ширины/высоты экрана */
     const rows=Math.ceil(allcups.cups.length/columns);
-    const size=Math.min(Math.floor(window.innerHeight/rows)-padding*2,Math.floor(window.innerWidth/columns)-padding*2)
+    const size=Math.min(Math.floor(window.innerHeight/rows)-padding*2,Math.floor(window.innerWidth/columns)-padding*2);
 
     return (
         <div className='cups' style={{

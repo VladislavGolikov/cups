@@ -1,0 +1,14 @@
+.show-selection {
+    position: absolute;
+    background-color: #00ff00;
+    font-family: sans-serif;
+    font-size: 1.5vh;
+    font-weight: bold;
+    color: red;
+    top:2vh;
+    left: 2vh;
+    width: 8vh;
+    height: 3vh;
+    border-radius: 0.5vh;
+    z-index: 50;
+}
