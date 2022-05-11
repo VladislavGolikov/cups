@@ -13,6 +13,14 @@ export const Selection=(props) => {
     let [shrink, setStateShrink]=useState(false);
     let [active, setStateActive]=useState(props.active);
     let [className, setStateСlassName]=useState('select');
+    let yearMin=0;
+    let yearMax=0;
+    function getYears(min,max) {
+        yearMin=min;
+        yearMax=max;
+        console.log(yearMin, yearMax)
+    }
+
 
     if (active!=props.active&&!expand&&!shrink) {
         setStateActive(props.active);
@@ -35,7 +43,7 @@ export const Selection=(props) => {
 
     return ReactDOM.createPortal(
       <form className={className} onAnimationEnd={animationEnd}>
-        <SelectionYears/>
+        <SelectionYears setYears={getYears} />
         <button className="show">показать</button>
         <button className="reset">сброс</button>
         <button className="turn-left">все вдруг влево</button>
