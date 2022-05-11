@@ -37,8 +37,11 @@ export const SelectionYears=(props) => {
           <input className="year-max" type="range" id="year-max" name="year-max" min={Math.min(...allYears)} max={Math.max(...allYears)}  step="1"
             onChange={()=>changeValues(true)} value={valueMax} />
 
-          <label htmlFor="year-min" className="year-label">{valueRange}</label>
-          <label htmlFor="year-max" className="year-label">{valueRange}</label>
+          <label htmlFor="year-min" className="year-label-min">{`Выбор года: ${valueMin}`}</label>
+          {(valueMax!==valueMin)&&(
+            <label htmlFor="year-max" className="year-label-max">{`-${valueMax}`}</label>
+          )}
+
         </>
      );
 };
