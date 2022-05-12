@@ -1,29 +1,18 @@
 import React from 'react';
 
 import {Cup} from './cup.jsx';
-
 import allcups from '../data_source/allcups.json';
 
+export const AllCups=(props) => {
 
-
-export const AllCups=(props) => {/*"id","title","color","material","date","source","land","place","fileName"*/
-
-
-const resultingArray=allcups.cups.filter((el)=>
-    (el[0]==props.id||true)&& /* заглушка на проверку по... */
-    (el[1]==props.title||true)&& /* заглушка на проверку по... */
-    (el[2]==props.color||true)&& /* заглушка на проверку по... */
-    (el[3]==props.material||true)&& /* заглушка на проверку по... */
-    (el[4]==props.date||true)&& /* заглушка на проверку по... */
-    (el[5]==props.source||true)&& /* заглушка на проверку по... */
-    (el[6]==props.land||true)&& /* заглушка на проверку по... */
-    (el[7]==props.place||true) /* заглушка на проверку по... */
-    )
-
-
-
-
-
+    const resultingArray=[];
+    allcups.cups.forEach((el,ind)=>{
+    if ((el[0]==props.id||props.id===true)&&(el[1]==props.title||props.title===true)&&
+        (el[2]==props.color||props.color===true)&&(el[3]==props.material||props.material===true)&&
+        (el[4]==props.date||props.date===true)&&(el[5]==props.source||props.source===true)&&
+        (el[6]==props.land||props.land===true)&&(el[7]==props.place||props.place===true))
+        resultingArray.push(ind)
+        });
 
     const padding=1;
     const columns=resultingArray.reduce((prev,el,ind,arr)=>{
@@ -39,7 +28,7 @@ const resultingArray=allcups.cups.filter((el)=>
             gridTemplateColumns: `repeat(${columns}, ${size}px)`,
             padding: `${padding}px`
         }}>
-        {resultingArray.map((el,ind)=>{return <Cup serial={ind} rows={rows} columns={columns} key={resultingArray[ind][0]}></Cup>})}
+        {resultingArray.map((el,ind)=>{return <Cup index={el} orderBy={ind} rows={rows} columns={columns} key={allcups.cups[el][0]}></Cup>})}
         </div>
     )
 }

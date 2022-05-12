@@ -7,10 +7,10 @@ const fileFrames=['1.png','2.png','3.png','4.png'];
 
 export const Cup=(props) => {
     let [value, setState]=useState(0);
-    const [id,title,color,material,date,source,land,place,fileName]=allcups.cups[props.serial];
+    const [id,title,color,material,date,source,land,place,fileName]=allcups.cups[props.index];
     let filePath=`${process.env.PUBLIC_URL}/${fileName}${fileFrames[value]}`;
-    const left=(props.serial)%props.columns+1;
-    const top=Math.ceil((props.serial+1)/props.columns);
+    const left=(props.orderBy)%props.columns+1;
+    const top=Math.ceil((props.orderBy+1)/props.columns);
 
     return (
         <div className="cup"
