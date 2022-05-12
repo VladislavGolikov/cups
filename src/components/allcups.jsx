@@ -10,14 +10,14 @@ export const AllCups=(props) => {/*"id","title","color","material","date","sourc
 
 
 const resultingArray=allcups.cups.filter((el)=>
-    el[0]==props.id||true&& /* заглушка на проверку по... */
-    el[1]==props.title||true&& /* заглушка на проверку по... */
-    el[2]==props.color||true&& /* заглушка на проверку по... */
-    el[3]==props.material||true&& /* заглушка на проверку по... */
-    el[4]==props.date||true&& /* заглушка на проверку по... */
-    el[5]==props.source||true&& /* заглушка на проверку по... */
-    el[6]==props.land||true&& /* заглушка на проверку по... */
-    el[7]==props.place||true /* заглушка на проверку по... */
+    (el[0]==props.id||true)&& /* заглушка на проверку по... */
+    (el[1]==props.title||true)&& /* заглушка на проверку по... */
+    (el[2]==props.color||true)&& /* заглушка на проверку по... */
+    (el[3]==props.material||true)&& /* заглушка на проверку по... */
+    (el[4]==props.date||true)&& /* заглушка на проверку по... */
+    (el[5]==props.source||true)&& /* заглушка на проверку по... */
+    (el[6]==props.land||true)&& /* заглушка на проверку по... */
+    (el[7]==props.place||true) /* заглушка на проверку по... */
     )
 
 
