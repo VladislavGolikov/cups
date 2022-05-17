@@ -16,7 +16,8 @@ body {
         width: 100vw;
         height: 100vh;
         display: grid;
-        place-content: space-around;
+        grid-gap: 5px;
+        place-content: center;
 
         .cup {
             display: grid;

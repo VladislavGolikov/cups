@@ -11,9 +11,3 @@ const mainComponent=<Main/>;
 root.render(mainComponent);
 
 
-
-
-
-
-
-

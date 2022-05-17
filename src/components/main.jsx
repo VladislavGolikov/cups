@@ -9,24 +9,15 @@ export const Main=(props) => {
     let [title, setTitle]=useState(true);
     let [color, setColor]=useState(true);
     let [material, setMaterial]=useState(true);
-    let [date, setDate]=useState(true);
+    let [year, setYear]=useState(true);
     let [source, setSource]=useState(true);
     let [land, setLand]=useState(true);
     let [place, setPlace]=useState(true); /* по умолчанию покажем всех! */
 
 
-
-
-
-
-
-
-
-
-
     return (
         <>
-          <AllCups id={id} title={title} color={color} material={material} date={date} source={source} land={land} place={place}></AllCups>
+          <AllCups id={id} title={title} color={color} material={material} year={year} source={source} land={land} place={place}></AllCups>
           <ShowSelection></ShowSelection>
         </>
     );
