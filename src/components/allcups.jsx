@@ -1,12 +1,18 @@
 import React from 'react';
-import {useState} from "react";
+import {useState,useContext} from "react";
 
 import {Cup} from './cup.jsx';
 import allcups from '../data_source/allcups.json';
 
-
+import {context} from './main.jsx';
 
 export const AllCups=(props) => {
+
+
+
+
+
+
     let [innerWidth, setInnerWidth]=useState(window.innerWidth);
     let [innerHeight, setInnerHeight]=useState(window.innerHeight);
     window.addEventListener('resize',()=>{ /* динамическая перестройка макета при изменении окна */
@@ -35,12 +41,17 @@ export const AllCups=(props) => {
     }
 
     return (
+        <>
         <div className='cups' style={{
             gridTemplateRows: `repeat(${rows}, ${size}px)`,
             gridTemplateColumns: `repeat(${columns}, ${size}px)`
         }}>
         {resultingArray.map((el,ind)=>{return <Cup index={el} orderBy={ind} rows={rows} columns={columns} key={allcups.cups[el][0]}></Cup>})}
         </div>
+        <context.Consumer>
+        {value => value}
+        </context.Consumer>
+        </>
     )
 }
 
