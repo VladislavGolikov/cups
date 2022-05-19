@@ -33,6 +33,7 @@ export const AllCups=(props) => {
     });
 
     const padding=5; /* сделано для grid-gap 5px */
+    const coefFontSize=0.06; /* подобрано наобум */
     let columns,rows,size=0;
     for (let i=1;i<=resultingArray.length;i++) { /* расчет оптимального размера, строк и столбцов */
         const currentColumns=i;
@@ -41,11 +42,13 @@ export const AllCups=(props) => {
         if (currentSize>size) {size=currentSize;columns=currentColumns;rows=currentRows}
     }
 
+
     return (
         <>
         <div className='cups' style={{
             gridTemplateRows: `repeat(${rows}, ${size}px)`,
-            gridTemplateColumns: `repeat(${columns}, ${size}px)`
+            gridTemplateColumns: `repeat(${columns}, ${size}px)`,
+            fontSize: `${size*coefFontSize}px`
         }}>
         {resultingArray.map((el,ind)=>{return <Cup index={el} orderBy={ind} rows={rows} columns={columns} key={allcups.cups[el][0]}></Cup>})}
         </div>
