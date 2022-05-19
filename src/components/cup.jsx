@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState} from "react";
+import '../styles/cup.scss';
 import allcups from '../data_source/allcups.json';
 
 

@@ -2,6 +2,8 @@ $width: 30vw;
 $height: 40vh;
 $number-of-lines: 11;
 $font-size: 2vh;
+$hide-left: 15vw;
+$hide-top: -20vh;
 
 .select {
     position: absolute;
@@ -53,12 +55,12 @@ $font-size: 2vh;
 }
 
 @keyframes expand {
-    from {left: 0; width: 0; top: 0; height: 0; font-size: 0%;}
-    to {top:50vh-$height/2; left: 50vw-$width/2; width: $width; height: $height; font-size: $font-size;}
+    from {left: $hide-left; top: $hide-top; width: 0; height: 0; font-size: 0%;}
+    to {left: 50vw-$width/2; top: 50vh-$height/2; width: $width; height: $height; font-size: $font-size;}
 }
 @keyframes shrink {
-    from {top:50vh-$height/2; left: 50vw-$width/2; width: $width; height: $height; font-size: $font-size;}
-    to {left: 0; width: 0; top: 0; height: 0; font-size: 0%;}
+    from {left: 50vw-$width/2; top: 50vh-$height/2; width: $width; height: $height; font-size: $font-size;}
+    to {left: $hide-left; top: $hide-top; width: 0; height: 0; font-size: 0%;}
 }
 
 %enter-exit {

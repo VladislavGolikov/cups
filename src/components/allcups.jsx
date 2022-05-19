@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState,useContext} from "react";
+import '../styles/allcups.scss';
 
 import {Cup} from './cup.jsx';
 import allcups from '../data_source/allcups.json';

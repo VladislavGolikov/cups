@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState} from "react";
+import '../styles/main.scss';
 
 import {AllCups} from './allcups.jsx';
 import {ShowSelection} from './showselection.jsx';
